@@ -29,5 +29,6 @@ return [
         Webkul\Publication\Providers\ModuleServiceProvider::class,
         Webkul\ProductPassport\Providers\ModuleServiceProvider::class,
         Webkul\Measurement\Providers\ModuleServiceProvider::class,
+        Webkul\Orders\Providers\ModuleServiceProvider::class,
     ],
 ];

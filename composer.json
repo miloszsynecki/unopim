@@ -88,7 +88,8 @@
             "Webkul\\AppUrlGuard\\": "packages/Webkul/AppUrlGuard/src",
             "Webkul\\Resource\\": "packages/Webkul/Resource/src",
             "Webkul\\Publication\\": "packages/Webkul/Publication/src",
-            "Webkul\\ProductPassport\\": "packages/Webkul/ProductPassport/src"
+            "Webkul\\ProductPassport\\": "packages/Webkul/ProductPassport/src",
+            "Webkul\\Orders\\": "packages/Webkul/Orders/src"
         }
     },
     "autoload-dev": {
