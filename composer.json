@@ -7,8 +7,16 @@
         "laravel"
     ],
     "license": "MIT",
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../pim-hub/packages/*",
+            "options": { "symlink": true }
+        }
+    ],
     "require": {
         "php": "^8.4.1",
+        "dekordom/orders": "^1.0",
         "ext-calendar": "*",
         "ext-curl": "*",
         "ext-intl": "*",
@@ -88,8 +96,7 @@
             "Webkul\\AppUrlGuard\\": "packages/Webkul/AppUrlGuard/src",
             "Webkul\\Resource\\": "packages/Webkul/Resource/src",
             "Webkul\\Publication\\": "packages/Webkul/Publication/src",
-            "Webkul\\ProductPassport\\": "packages/Webkul/ProductPassport/src",
-            "Webkul\\Orders\\": "packages/Webkul/Orders/src"
+            "Webkul\\ProductPassport\\": "packages/Webkul/ProductPassport/src"
         }
     },
     "autoload-dev": {

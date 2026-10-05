@@ -110,6 +110,7 @@ services:
         INSTALL_COVERAGE_EXTENSION: "${INSTALL_COVERAGE_EXTENSION:-true}"
     volumes:
       - .:/var/www/html
+      - ../pim-hub:/var/www/pim-hub
       - ./dockerfiles/php-dev.ini:/usr/local/etc/php/conf.d/zz-unopim-dev.ini:ro
     restart: unless-stopped
     env_file: .env
@@ -133,6 +134,7 @@ services:
         HOST_GID: "${HOST_GID:-33}"
     volumes:
       - .:/var/www/html
+      - ../pim-hub:/var/www/pim-hub
       - ./dockerfiles/php-dev.ini:/usr/local/etc/php/conf.d/zz-unopim-dev.ini:ro
     restart: unless-stopped
     env_file: .env
@@ -158,6 +160,7 @@ services:
     entrypoint: ["/var/www/html/dockerfiles/scheduler-entrypoint.sh"]
     volumes:
       - .:/var/www/html
+      - ../pim-hub:/var/www/pim-hub
       - ./dockerfiles/php-dev.ini:/usr/local/etc/php/conf.d/zz-unopim-dev.ini:ro
     restart: unless-stopped
     env_file: .env

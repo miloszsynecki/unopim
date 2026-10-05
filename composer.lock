@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7be17824e9e754e7fcfcf78f4edbd0cd",
+    "content-hash": "69cf4edddf4c6292d758c1c65fc29848",
     "packages": [
         {
             "name": "astrotomic/laravel-translatable",
@@ -843,6 +843,39 @@
                 "source": "https://github.com/defuse/php-encryption/tree/v2.4.0"
             },
             "time": "2023-06-19T06:10:36+00:00"
+        },
+        {
+            "name": "dekordom/orders",
+            "version": "1.0.0",
+            "dist": {
+                "type": "path",
+                "url": "../pim-hub/packages/orders",
+                "reference": "f4a992cdb4497282cf8108348ea65149b7388249"
+            },
+            "require": {
+                "php": "^8.4"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Dekordom\\Orders\\Providers\\OrdersServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Dekordom\\Orders\\": "src"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "description": "Unified multi-channel order console (read model) for UnoPim.",
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
         },
         {
             "name": "dflydev/dot-access-data",

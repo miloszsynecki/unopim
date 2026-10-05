@@ -19,7 +19,6 @@ use Webkul\Installer\Providers\InstallerServiceProvider;
 use Webkul\MagicAI\Providers\MagicAIServiceProvider;
 use Webkul\Measurement\Providers\MeasurementServiceProvider;
 use Webkul\Notification\Providers\NotificationServiceProvider;
-use Webkul\Orders\Providers\OrdersServiceProvider;
 use Webkul\Product\Providers\ProductServiceProvider;
 use Webkul\ProductPassport\Providers\ProductPassportServiceProvider;
 use Webkul\Publication\Providers\PublicationServiceProvider;
@@ -55,5 +54,4 @@ return [
     AppUrlGuardServiceProvider::class,
     ProductPassportServiceProvider::class,
     PublicationServiceProvider::class,
-    OrdersServiceProvider::class,
 ];
