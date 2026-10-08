@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a3fe547ae44120aba982a248f509e0fe",
+    "content-hash": "578cfba42962cf6fd7646672761ac49e",
     "packages": [
         {
             "name": "astrotomic/laravel-translatable",
@@ -872,6 +872,40 @@
                 "proprietary"
             ],
             "description": "Loud failures: grouped, redacted alerts for failed jobs, connector errors and dead queue workers.",
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
+            "name": "dekordom/allegro",
+            "version": "1.0.0",
+            "dist": {
+                "type": "path",
+                "url": "../pim-hub/packages/allegro",
+                "reference": "604e6ba1844be22f376f4323fba9e010ab26cfd1"
+            },
+            "require": {
+                "dekordom/orders": "^1.0",
+                "php": "^8.4"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Dekordom\\Allegro\\Providers\\AllegroServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Dekordom\\Allegro\\": "src"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "description": "Allegro connector for UnoPim: OAuth, order events ingest, order read model.",
             "transport-options": {
                 "symlink": true,
                 "relative": true
