@@ -14,6 +14,13 @@ FROM composer:2 AS composer
 WORKDIR /app
 COPY composer.json composer.lock ./
 COPY packages/ packages/
+# Our feature packages (dekordom/*) come from the pim-hub checkout via the
+# composer path repo "../pim-hub/packages/*". Pass it as a named build context
+# (compose: additional_contexts: pimhub: ../pim-hub) and COPY them (no symlinks)
+# so the image is self-contained.
+COPY --from=pimhub packages/ /pim-hub/packages/
+# Dev symlinks them (composer.json "symlink": true); an image must copy instead.
+RUN sed -i 's/"symlink": *true/"symlink": false/' composer.json composer.lock
 RUN composer install \
     --no-dev \
     --no-interaction \

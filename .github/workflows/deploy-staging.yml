@@ -1,0 +1,36 @@
+name: Deploy staging
+
+# The UnoPim app shell (this fork) changed on the deploy branch → redeploy
+# staging. The script on the server pulls this fork AND pim-hub (our packages).
+on:
+  push:
+    branches: [feat/orders-console]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-staging
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-24.04
+    environment: staging
+    steps:
+      - name: Deploy over SSH
+        env:
+          HOST: ${{ secrets.STAGING_HOST }}
+          USER: ${{ secrets.STAGING_USER }}
+          KEY: ${{ secrets.STAGING_SSH_KEY }}
+          KNOWN_HOSTS: ${{ secrets.STAGING_KNOWN_HOSTS }}
+        run: |
+          if [ -z "$HOST" ] || [ -z "$KEY" ] || [ -z "$KNOWN_HOSTS" ]; then
+            echo "::notice::Staging secrets not configured yet — skipping deploy (see pim-hub docs/deploy.md)."
+            exit 0
+          fi
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$KEY" > ~/.ssh/deploy_key && chmod 600 ~/.ssh/deploy_key
+          printf '%s\n' "$KNOWN_HOSTS" > ~/.ssh/known_hosts
+          ssh -i ~/.ssh/deploy_key "${USER:-deploy}@$HOST" /srv/pim/pim-hub/deploy/deploy.sh

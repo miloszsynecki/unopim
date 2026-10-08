@@ -28,6 +28,10 @@ storage/framework/views/*
 storage/logs/*
 storage/unopim.lock
 
+# Laravel's package/service caches from a local checkout (they can list dev-only
+# providers like debugbar that a --no-dev image doesn't have)
+bootstrap/cache/*.php
+
 # Local files
 backups
 .env
