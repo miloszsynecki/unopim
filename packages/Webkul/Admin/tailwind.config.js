@@ -11,6 +11,8 @@ module.exports = {
         "./src/Resources/**/*.js",
         "../*/src/Resources/**/*.blade.php",
         "../*/src/Resources/**/*.js",
+        // Our feature packages (pim-hub, symlinked in via the composer path repo).
+        "../../../vendor/dekordom/*/src/Resources/**/*.blade.php",
     ],
 
     theme: {
