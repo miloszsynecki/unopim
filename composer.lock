@@ -883,10 +883,11 @@
             "dist": {
                 "type": "path",
                 "url": "../pim-hub/packages/allegro",
-                "reference": "604e6ba1844be22f376f4323fba9e010ab26cfd1"
+                "reference": "d23b01bf88726a1733574416d289951feaa2f79d"
             },
             "require": {
                 "dekordom/orders": "^1.0",
+                "dekordom/shipping": "^1.0",
                 "php": "^8.4"
             },
             "type": "library",
