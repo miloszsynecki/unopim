@@ -918,9 +918,10 @@
             "dist": {
                 "type": "path",
                 "url": "../pim-hub/packages/orders",
-                "reference": "f4a992cdb4497282cf8108348ea65149b7388249"
+                "reference": "24b9bc41af811458ce83b678d89eea90261964ab"
             },
             "require": {
+                "dekordom/shipping": "^1.0",
                 "php": "^8.4"
             },
             "type": "library",
