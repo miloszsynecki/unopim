@@ -12,7 +12,8 @@ module.exports = {
         "../*/src/Resources/**/*.blade.php",
         "../*/src/Resources/**/*.js",
         // Our feature packages (pim-hub, symlinked in via the composer path repo).
-        "../../../vendor/dekordom/*/src/Resources/**/*.blade.php",
+        // DataGrid closures (PHP) emit markup with classes too.
+        "../../../vendor/dekordom/*/src/**/*.php",
     ],
 
     theme: {
