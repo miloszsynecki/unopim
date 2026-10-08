@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "69cf4edddf4c6292d758c1c65fc29848",
+    "content-hash": "5ae30b1b1c57b229de781ea927a96e20",
     "packages": [
         {
             "name": "astrotomic/laravel-translatable",
@@ -872,6 +872,39 @@
                 "proprietary"
             ],
             "description": "Unified multi-channel order console (read model) for UnoPim.",
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
+            "name": "dekordom/shipping",
+            "version": "1.0.0",
+            "dist": {
+                "type": "path",
+                "url": "../pim-hub/packages/shipping",
+                "reference": "4a02248a77adf9ff417e183342bba1f39b46d654"
+            },
+            "require": {
+                "php": "^8.4"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Dekordom\\Shipping\\Providers\\ShippingServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Dekordom\\Shipping\\": "src"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "description": "Carrier-agnostic shipping-driver contract + carrier drivers for UnoPim.",
             "transport-options": {
                 "symlink": true,
                 "relative": true
