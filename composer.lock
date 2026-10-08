@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5ae30b1b1c57b229de781ea927a96e20",
+    "content-hash": "a3fe547ae44120aba982a248f509e0fe",
     "packages": [
         {
             "name": "astrotomic/laravel-translatable",
@@ -843,6 +843,39 @@
                 "source": "https://github.com/defuse/php-encryption/tree/v2.4.0"
             },
             "time": "2023-06-19T06:10:36+00:00"
+        },
+        {
+            "name": "dekordom/alerting",
+            "version": "1.0.0",
+            "dist": {
+                "type": "path",
+                "url": "../pim-hub/packages/alerting",
+                "reference": "99100bdcc4c0d2d8db46199a799e9a94a4a20175"
+            },
+            "require": {
+                "php": "^8.4"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Dekordom\\Alerting\\Providers\\AlertingServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Dekordom\\Alerting\\": "src"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "description": "Loud failures: grouped, redacted alerts for failed jobs, connector errors and dead queue workers.",
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
         },
         {
             "name": "dekordom/orders",

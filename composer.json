@@ -27,6 +27,7 @@
         "astrotomic/laravel-translatable": "^11.16.0",
         "bacon/bacon-qr-code": "^3.1",
         "barryvdh/laravel-dompdf": "^2.0.0|^3.0",
+        "dekordom/alerting": "^1.0",
         "dekordom/orders": "^1.0",
         "dekordom/shipping": "^1.0",
         "diglactic/laravel-breadcrumbs": "^10.0",
