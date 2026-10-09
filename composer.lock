@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "578cfba42962cf6fd7646672761ac49e",
+    "content-hash": "b69964d8bdcc8ddfc78354e5fbb31b95",
     "packages": [
         {
             "name": "astrotomic/laravel-translatable",
@@ -974,6 +974,39 @@
                 "proprietary"
             ],
             "description": "Carrier-agnostic shipping-driver contract + carrier drivers for UnoPim.",
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
+            "name": "dekordom/symfonia",
+            "version": "1.0.0",
+            "dist": {
+                "type": "path",
+                "url": "../pim-hub/packages/symfonia",
+                "reference": "ef58891da3fa46ab94eaeea1b4ea684f3286d391"
+            },
+            "require": {
+                "php": "^8.4"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Dekordom\\Symfonia\\Providers\\SymfoniaServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Dekordom\\Symfonia\\": "src"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "description": "Symfonia ERP Handel WebAPI client for UnoPim: session, goods, stock, contractors, documents.",
             "transport-options": {
                 "symlink": true,
                 "relative": true

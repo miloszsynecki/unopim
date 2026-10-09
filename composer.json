@@ -31,6 +31,7 @@
         "dekordom/allegro": "^1.0",
         "dekordom/orders": "^1.0",
         "dekordom/shipping": "^1.0",
+        "dekordom/symfonia": "^1.0",
         "diglactic/laravel-breadcrumbs": "^10.0",
         "elasticsearch/elasticsearch": "^8.17",
         "enshrined/svg-sanitize": "^0.22.0",
