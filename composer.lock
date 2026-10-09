@@ -985,9 +985,10 @@
             "dist": {
                 "type": "path",
                 "url": "../pim-hub/packages/symfonia",
-                "reference": "ef58891da3fa46ab94eaeea1b4ea684f3286d391"
+                "reference": "9dcb0adc4e8286b7ea11d57c7cd5bd0c3a0d9a5f"
             },
             "require": {
+                "dekordom/orders": "^1.0",
                 "php": "^8.4"
             },
             "type": "library",
